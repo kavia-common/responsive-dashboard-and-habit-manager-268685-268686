@@ -149,6 +149,12 @@ a:hover {
     border-color: rgba(59, 130, 246, 0.55);
 }
 
+.fieldHint {
+    color: var(--color-muted);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
 .formRow {
     display: flex;
     justify-content: flex-end;
@@ -279,6 +285,162 @@ a:hover {
 
 .btn--secondary:hover {
     background: rgba(17, 24, 39, 0.09);
+}
+
+/* Chips / tags */
+.chipRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(17, 24, 39, 0.10);
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.chip--ok {
+    border-color: rgba(16, 185, 129, 0.35);
+    color: rgba(4, 120, 87, 1);
+    background: rgba(16, 185, 129, 0.10);
+}
+
+.chip--warn {
+    border-color: rgba(245, 158, 11, 0.35);
+    color: rgba(146, 64, 14, 1);
+    background: rgba(245, 158, 11, 0.12);
+}
+
+.chip--danger {
+    border-color: rgba(239, 68, 68, 0.35);
+    color: rgba(153, 27, 27, 1);
+    background: rgba(239, 68, 68, 0.10);
+}
+
+/* Toolbar + table */
+.toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.toolbarLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.toolbarRight {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+    text-align: left;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+.table th {
+    color: var(--color-muted);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.rowActions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+/* Modal */
+.modalBackdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(17, 24, 39, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 50;
+}
+
+.modal {
+    width: 100%;
+    max-width: 620px;
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    border: 1px solid rgba(17, 24, 39, 0.10);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 14px;
+    border-bottom: var(--border);
+}
+
+.modalTitle {
+    font-weight: 800;
+}
+
+.modalBody {
+    padding: 14px;
+}
+
+.modalFooter {
+    padding: 12px 14px;
+    border-top: var(--border);
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Simple chart blocks */
+.chartGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    .chartGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bar {
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(17, 24, 39, 0.08);
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 1), rgba(16, 185, 129, 1));
+    width: 0%;
 }
 
 /* App shell */

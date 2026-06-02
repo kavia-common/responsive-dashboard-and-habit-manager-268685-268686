@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter} from 'react-router-dom';
 
 import {AuthProvider} from './state/auth/AuthContext';
+import {DataProvider} from './state/data/DataContext';
 import {AppRoutes} from './routes/AppRoutes';
 
 // PUBLIC_INTERFACE
@@ -10,7 +11,9 @@ export function App() {
     return (
         <BrowserRouter>
             <AuthProvider>
-                <AppRoutes />
+                <DataProvider>
+                    <AppRoutes />
+                </DataProvider>
             </AuthProvider>
         </BrowserRouter>
     );
